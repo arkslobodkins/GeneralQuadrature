@@ -1,0 +1,1 @@
+double *NodeEliminationCentered(double *X,double *W,int p,int n, int m, int dim, int *nNodesNew,int *IterationCount, int *SuccessNode, int *SuccessDim, int *countSuccess, double *XQuads, int dim1, int dim2);
