@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #include "../headers/StoreCopy.h"
 
 void CopyNodes(int n, int dim, double *x, double *y) {

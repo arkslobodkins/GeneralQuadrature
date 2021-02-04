@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef SET_DOMAIN_H
 #define SET_DOMAIN_H
 struct functionHandles;

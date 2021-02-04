@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

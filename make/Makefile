@@ -1,3 +1,8 @@
+# Arkadijs Slobodkins
+# SMU Mathematics
+# February 2021
+#
+
 CC = gcc
 CFLAGS=-g
 LIBSLA = -llapack
@@ -9,7 +14,7 @@ VPATH= ../src:../src/Gauss_Lib:../results
 OBJS =  GaussCore.o Hermite.o Jacobi.o Laguerre.o 
 
 all : Driver.x 
-Driver.x: Driver.o TestIntegral.o InsertionSort.o IntegralsOfBasisFunctions.o LeastSquaresNewton.o GaussTensor.o GetJacobian.o GetFunction.o NodeElimination.o  Phi.o GeneralizedGaussTensor.o LegendrePoly.o BasisIndices.o Output.o JacobiPoly.o AddDimension.o InDomain.o ComputeDomain.o ImplementDomain.o SetParams.o SetDomain.o StoreCopy.o libgaussq.a
+Driver.x: Driver.o TestIntegral.o InsertionSort.o IntegralsOfBasisFunctions.o LeastSquaresNewton.o GaussTensor.o GetJacobian.o GetFunction.o NodeElimination.o  Phi.o  LegendrePoly.o BasisIndices.o Output.o JacobiPoly.o AddDimension.o InDomain.o ComputeDomain.o ImplementDomain.o SetParams.o SetDomain.o StoreCopy.o libgaussq.a
 	$(CC)  $(CFLAGS)  -o $@ $^ $(LIBSLA) $(LIBSBLAS) $(MATH)
 	
 libgaussq.a: $(OBJS)

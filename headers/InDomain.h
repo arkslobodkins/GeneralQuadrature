@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef IN_DOMAIN_H
 #define IN_DOMAIN_H
 typedef int boolean;

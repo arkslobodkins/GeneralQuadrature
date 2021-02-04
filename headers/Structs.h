@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef STRUCTS_H
 #define STRUCTS_H
 #include "InDomain.h"

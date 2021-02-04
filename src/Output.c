@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #include <stdio.h>
 #include "../headers/Output.h"
 #include "../headers/Structs.h"

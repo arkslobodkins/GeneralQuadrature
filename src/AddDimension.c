@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #include "../headers/AddDimension.h"
 #include "../headers/GaussTensor.h"
 /* AddLine

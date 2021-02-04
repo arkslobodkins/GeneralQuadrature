@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef PHI_H
 #define PHI_H
 struct quadratureParameters;

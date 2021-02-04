@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef STORE_COPY_H
 #define STORE_COPY_H
 void CopyNodes( int, int, double *, double *);

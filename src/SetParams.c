@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #include <stdlib.h>
 #include "../headers/SetParams.h"
 #include "../headers/BasisIndices.h"

@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef ADD_DIMENSION_H
 #define ADD_DIMENSION_H
 void AddLine(int d,int n, int Nold, double *x,double *Xnew, double *w, double *Wnew, double *Xinitial, double *Winitial);

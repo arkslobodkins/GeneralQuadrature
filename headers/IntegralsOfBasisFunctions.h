@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef INTEGRALS_OF_BASIS_FUNCTIONS_H
 #define INTEGRALS_OF_BASIS_FUNCTIONS_H
 struct quadratureParameters;

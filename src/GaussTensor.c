@@ -1,3 +1,7 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
 #include "../headers/GaussTensor.h"
 
 /* NodesTensor

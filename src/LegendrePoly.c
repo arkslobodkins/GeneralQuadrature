@@ -1,3 +1,8 @@
+/* Johannes Tausch
+ * SMU Mathematics
+ * August 2020
+ */
+
 #include <math.h>
 #include <stdio.h>
 #include <string.h>

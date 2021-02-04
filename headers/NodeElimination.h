@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef NODE_ELIMINATION_H
 #define NODE_ELIMINATION_H
 struct functionHandles;

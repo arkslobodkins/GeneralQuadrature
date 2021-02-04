@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef LEAST_SQUARES_NEWTON_H
 #define LEAST_SQUARES_NEWTON_H
 struct functionHandles;

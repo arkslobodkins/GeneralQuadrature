@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #include <string.h>
 #include <math.h>
 #include "../headers/IntegralsOfBasisFunctions.h"

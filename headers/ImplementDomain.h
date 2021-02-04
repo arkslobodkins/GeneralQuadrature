@@ -1,3 +1,8 @@
+/* Arkadijs Slobodkins
+ * SMU Mathematics
+ * February 2021
+ */
+
 #ifndef IMPLEMENT_DOMAIN_H
 #define IMPLEMENT_DOMAIN_H
 void ImplementCube(int,  int);
