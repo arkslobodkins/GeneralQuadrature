@@ -53,7 +53,7 @@ void ComputeCube(struct functionHandles *domainFunctions, struct quadratureParam
   int i,j,d;
 
   if(dim==1) {
-    DumpCubatureRule(x, w, n, 1);
+    DumpCubatureRule(x, w, n, params, "CUBE");
     return;
   }
 
@@ -81,9 +81,10 @@ void ComputeCube(struct functionHandles *domainFunctions, struct quadratureParam
     NodeElimination(nNodesCur ,xInitial,wInitial, &nNodesNew,  xNew, wNew, domainFunctions, params, history);    
   }
   //print results to results.txt and quadRule.txt
-  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history); 
-  DumpCubatureRule(xNew, wNew, nNodesNew, dim);
+  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history, "CUBE"); 
+  DumpCubatureRule(xNew, wNew, nNodesNew, params, "CUBE");
   res=TestIntegral(nNodesNew, xNew,wNew, domainFunctions, params);
+  printf("reached \n");
   printf("Final residual of the sum of all basis function integrals =%.16f \n", res); 
 	
   FreeMemory(xInitial, wInitial, xNew, wNew, history);
@@ -146,8 +147,8 @@ void ComputeSimplex(struct functionHandles *domainFunctions, struct quadraturePa
     NodeElimination(nNodesCur ,xInitial,wInitial, &nNodesNew,  xNew, wNew, domainFunctions, params, history);   
   }
   //print results to results.txt and quadRule.txt
-  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history); 
-  DumpCubatureRule(xNew, wNew, nNodesNew, dim);
+  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history, "SIMPLEX"); 
+  DumpCubatureRule(xNew, wNew, nNodesNew, params, "SIMPLEX");
   res=TestIntegral(nNodesNew, xNew,wNew, domainFunctions, params);
   printf("Final residual of the sum of all basis function integrals =%.16f \n", res); 
   
@@ -234,8 +235,8 @@ void ComputeCubeSimplex(struct functionHandles *domainFunctions, struct quadratu
     NodeElimination(nNodesCur ,xInitial,wInitial, &nNodesNew,  xNew, wNew, domainFunctions, params, history);    
   }
   //print results to results.txt and quadRule.txt
-  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history); 
-  DumpCubatureRule(xNew, wNew, nNodesNew, dim);
+  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history, "CUBESIMPLEX"); 
+  DumpCubatureRule(xNew, wNew, nNodesNew, params, "CUBESIMPLEX");
   res=TestIntegral(nNodesNew, xNew,wNew, domainFunctions, params);
   printf("Final residual of the sum of all basis function integrals =%.16f \n", res); 
   FreeMemory(xInitial, wInitial, xNew, wNew, history);
@@ -389,8 +390,8 @@ void ComputeSimplexSimplex(struct functionHandles *domainFunctions, struct quadr
   //print results to results.txt and quadRule.txt
   res=TestIntegral(nNodesNewSimplexSimplex, xNewSimplexSimplex,wNewSimplexSimplex, domainFunctions, params);
   printf("Final residual of the sum of all basis function integrals =%.16f \n", res); 
-  Output(xInitial, wInitial, nNodesCurSimplexSimplex,xNewSimplexSimplex, wNewSimplexSimplex, nNodesNewSimplexSimplex, domainFunctions, params,  history); 
-  DumpCubatureRule(xNewSimplexSimplex, wNewSimplexSimplex, nNodesNewSimplexSimplex, dim);
+  Output(xInitial, wInitial, nNodesCurSimplexSimplex,xNewSimplexSimplex, wNewSimplexSimplex, nNodesNewSimplexSimplex, domainFunctions, params,  history, "SIMPLEXSIMPLEX"); 
+  DumpCubatureRule(xNewSimplexSimplex, wNewSimplexSimplex, nNodesNewSimplexSimplex, params, "SIMPLEXSIMPLEX");
   FreeMemory(xInitial, wInitial, xNewSimplexSimplex, wNewSimplexSimplex, history);
 } /* end ComputeSimplexSimplex */
 
@@ -579,8 +580,8 @@ void ComputeCubeSimplexSimplex(struct functionHandles *domainFunctions, struct q
   } 
 
   //print results to results.txt and quadRule.txt
-  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history); 
-  DumpCubatureRule(xNew, wNew, nNodesNew, dim);
+  Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history, "CUBESIMPLEXSIMPLEX"); 
+  DumpCubatureRule(xNew, wNew, nNodesNew, params, "CUBESIMPLEXSIMPLEX");
   FreeMemory(xInitial, wInitial, xNew, wNew, history);
 
 } /* end ComputeCubeSimplexSimplex */

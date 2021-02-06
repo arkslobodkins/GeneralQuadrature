@@ -1,0 +1,27 @@
+degree of precision=3 
+number of basis functions=20 
+dimension=3 
+initial number of nodes=12 
+final number of nodes=7 
+ 
+total number of nodes[0]=11 
+successNodexIndex[0]=0 
+Converged in 2 iterations 
+ 
+total number of nodes[1]=10 
+successNodexIndex[1]=0 
+Converged in 3 iterations 
+ 
+total number of nodes[2]=9 
+successNodexIndex[2]=0 
+Converged in 3 iterations 
+ 
+total number of nodes[3]=8 
+successNodexIndex[3]=0 
+Converged in 4 iterations 
+ 
+total number of nodes[4]=7 
+successNodexIndex[4]=0 
+Converged in 4 iterations 
+ 
+final residual=0.0000000000000000 

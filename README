@@ -1,0 +1,29 @@
+GeneralQuadrature is a numerical integration algorithm 
+for computing numerical quadrature rules of arbitrary
+degree and dimension for the following domains: cube, simplex, 
+cube x simplex, simplex x simplex,  cube x simplex x simplex. 
+Computational cost increases rapidly with the increase in dimension. 
+For example, quadrature of degree 10  and dimension 2 is computed in 
+half a second, whereas quadrature of dimension and degree 10 takes a few hours. 
+
+Source code is located in ./src directory. 
+Makefile is located in ./make directory. 
+All headers of the source code are located in ./headers directory.  
+Quadrature rules and results are stored in ./results directory. 
+
+To compile the code: go to ./make directory and enter "make". The code should
+compile and produce ./Driver.x executable. 
+
+To execute the code: In ./make enter "Driver.x CommandLineArguments".  
+The first entry in the command line arguments is a string that specifies type 
+of the domain. It should be capitalized, otherwise it will not run. 
+The remaining arguments are integers that specify dimension of the domain 
+and degree of precision. 
+
+Command line arguments should take one of the following forms:
+CUBE dim deg
+SIMPLEX dim deg
+CUBESIMPLEX dim1 dim2 deg
+SIMPLEXSIMPLEX dim1 dim2 deg
+CUBESIMPLEXSIMPLEX dim1 dim2 dim3 deg
+

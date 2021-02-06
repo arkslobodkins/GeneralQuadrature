@@ -21,7 +21,7 @@
  * 
  * Prints history and quadrature parameters to a file. 
 */
-void Output(double* xInitial, double* wInitial, int nInitial, double *xFinal, double *wFinal, int nFinal, struct functionHandles *functions, struct quadratureParameters *params, struct eliminationHistory *history) {
+void Output(double* xInitial, double* wInitial, int nInitial, double *xFinal, double *wFinal, int nFinal, struct functionHandles *functions, struct quadratureParameters *params, struct eliminationHistory *history, char *shape) {
   int i,d;
   int eliminations=history->totalEliminations;
   int dim=params->totalDimension;
@@ -29,7 +29,7 @@ void Output(double* xInitial, double* wInitial, int nInitial, double *xFinal, do
   int m=params->numberOfBasisFunctions;
   double res;
   FILE* FID;
-  FID = fopen("../results/analysis.txt","w");
+  FID = fopen("../results/history.txt","w");
     
   fprintf(FID, "degree of precision=%i \n", p);
   fprintf(FID, "number of basis functions=%i \n", m);
@@ -57,12 +57,16 @@ void Output(double* xInitial, double* wInitial, int nInitial, double *xFinal, do
  *  
  * prints final quadrature to a file 
 */  
-void DumpCubatureRule(double *xFinal, double *wFinal, int nFinal, int dim) {
+void DumpCubatureRule(double *xFinal, double *wFinal, int nFinal,  struct quadratureParameters *params, char  *shape) {
   int i, j;
   FILE* FID;
-  FID = fopen("../results/quadRule.txt","w");
-  fprintf(FID, "%i %i \n", dim, nFinal);
-  
+  char *str;
+  int dim=params->totalDimension;
+  int deg=params->degreeOfPrecision;
+  sprintf(str, "../results/%s_dim%i_deg%i.dat", shape, dim, deg);
+ // FID = fopen(str,"w");
+ // fprintf(FID, "%i %i \n", dim, nFinal);
+ // printf("str=%s \n", str);
   //print new quadrature nodes and weights    
   for(i=0;i<nFinal;i++) { 
     for(j=0;j<dim;j++) {
@@ -70,5 +74,6 @@ void DumpCubatureRule(double *xFinal, double *wFinal, int nFinal, int dim) {
     }
     fprintf(FID, "%.16le\n",wFinal[i]);
   }
-  fclose(FID);
+ // fclose(FID);
+ 
 } /* end dumpCubatureRule */

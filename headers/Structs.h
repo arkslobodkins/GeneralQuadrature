@@ -8,9 +8,9 @@
 #include "InDomain.h"
 struct quadratureParameters{ 
   int *dimension;
-	int  totalDimension;
+  int  totalDimension;
   int degreeOfPrecision;
-	int numberOfBasisFunctions;
+  int numberOfBasisFunctions;
 }P;
 
 struct functionHandles {
