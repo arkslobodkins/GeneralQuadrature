@@ -84,7 +84,6 @@ void ComputeCube(struct functionHandles *domainFunctions, struct quadratureParam
   Output(xInitial, wInitial, nNodesCur,xNew, wNew, nNodesNew, domainFunctions, params,  history, "CUBE"); 
   DumpCubatureRule(xNew, wNew, nNodesNew, params, "CUBE");
   res=TestIntegral(nNodesNew, xNew,wNew, domainFunctions, params);
-  printf("reached \n");
   printf("Final residual of the sum of all basis function integrals =%.16f \n", res); 
 	
   FreeMemory(xInitial, wInitial, xNew, wNew, history);

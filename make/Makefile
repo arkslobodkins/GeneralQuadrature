@@ -29,7 +29,7 @@ realclean : clean
 
 SUBDIR_ROOTS := ../results
 DIRS := . $(shell find $(SUBDIR_ROOTS) -type d)
-GARBAGE_PATTERNS := *.txt
+GARBAGE_PATTERNS := *.txt *.dat
 GARBAGE := $(foreach DIR,$(DIRS),$(addprefix $(DIR)/,$(GARBAGE_PATTERNS)))
 txtclean: 
 	rm -rf $(GARBAGE)

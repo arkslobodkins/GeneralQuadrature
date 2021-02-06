@@ -1,0 +1,15 @@
+degree of precision=2 
+number of basis functions=10 
+dimension=3 
+initial number of nodes=6 
+final number of nodes=4 
+ 
+total number of nodes[0]=5 
+successNodexIndex[0]=0 
+Converged in 5 iterations 
+ 
+total number of nodes[1]=4 
+successNodexIndex[1]=0 
+Converged in 6 iterations 
+ 
+final residual=0.0000000000000001 
